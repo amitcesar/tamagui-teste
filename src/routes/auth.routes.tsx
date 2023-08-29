@@ -3,9 +3,8 @@ import {
   NativeStackNavigationProp,
 } from "@react-navigation/native-stack";
 import { HomeScreen } from "@screens/Home";
-import { SignInScreen } from "@screens/SignIn";
 
-import { WelcomeScreen } from "@screens/Welcome";
+import { SignInScreen } from "@screens/SignIn";
 
 type AuthRoutes = {
   welcome: undefined;
