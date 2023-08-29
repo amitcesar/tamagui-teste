@@ -1,6 +1,6 @@
 import { UserAvatar } from "@components/UserAvatar";
 import { useState } from "react";
-import { FlatList } from "react-native";
+
 import { Avatar, H1, H5, Stack, XStack, YStack } from "tamagui";
 
 export function HomeScreen() {
@@ -11,14 +11,6 @@ export function HomeScreen() {
         <H5>Cofre Social</H5>
         <UserAvatar />
       </XStack>
-
-      {/* <FlatList 
-      data={groups}
-      keyExtractor={(item)=> item}
-      renderItem={({item}) => (
-
-      )}  
-      /> */}
     </YStack>
   );
 }
