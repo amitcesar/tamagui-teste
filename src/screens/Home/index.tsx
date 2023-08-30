@@ -1,22 +1,9 @@
 import { Button } from "@components/Button";
 import { GroupCard } from "@components/GroupCard";
 
-import { UserAvatar } from "@components/UserAvatar";
 import { useState } from "react";
 import { FlatList } from "react-native";
-import { ChevronLeft } from "lucide-react-native";
-import {
-  Avatar,
-  Text,
-  Group,
-  H1,
-  H4,
-  H5,
-  H6,
-  Stack,
-  XStack,
-  YStack,
-} from "tamagui";
+import { YStack } from "tamagui";
 import { Header } from "@components/Header";
 
 export function HomeScreen() {
