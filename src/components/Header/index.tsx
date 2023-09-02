@@ -1,30 +1,21 @@
-import { UserAvatar } from "@components/UserAvatar";
-import { ChevronLeft } from "lucide-react-native";
-import { Text, XStack, YStack } from "tamagui";
+import { Button, XStack } from "tamagui";
+import { ChevronLeft, Coins } from "lucide-react-native";
+import { useNavigation } from "@react-navigation/native";
+import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
 export function Header() {
+  const navitagion = useNavigation<AuthNavigatorRoutesProps>();
+  function BackButton() {
+    navitagion.goBack();
+  }
+
   return (
-    <YStack bg="$purple9Dark" pt="$4" p="$4" borderRadius={"$6"}>
-      <XStack jc="space-between" ai="flex-start">
-        <ChevronLeft size={32} color="#fff" />
-        <UserAvatar />
-      </XStack>
-      <YStack mt="$4" p="$2">
-        <Text fontSize="$5" fontWeight={"bold"} color="#fff">
-          Bem vindo de volta
-        </Text>
-        <Text fontSize="$5" color="#fff">
-          Erick Ray
-        </Text>
-      </YStack>
-      <YStack ai="flex-end" mt="$4">
-        <Text fontSize="$4" fontWeight={"bold"} color="#fff">
-          Suas Reservas
-        </Text>
-        <Text fontSize="$4" fontWeight={"bold"} color="#fff">
-          R$ 15.000
-        </Text>
-      </YStack>
-    </YStack>
+    <XStack mt="$8" jc="space-between" ai="center" pr="$6">
+      <Button onPress={BackButton} transparent>
+        <ChevronLeft size={32} color="#F76808" />
+      </Button>
+
+      <Coins size={24} color="#F76808" />
+    </XStack>
   );
 }

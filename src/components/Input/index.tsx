@@ -1,15 +1,20 @@
 import { Stack, Text, Input as TInput, InputProps } from "tamagui";
 
 type Props = InputProps & {
-  title: string;
+  title?: string;
 };
 
 export function Input({ title, ...rest }: Props) {
   return (
     <Stack>
-      <Text color={"$gray11Light"} pb="$2">
-        {title}
-      </Text>
+      {title ? (
+        <Text color={"$gray11Light"} pb="$2">
+          {title}
+        </Text>
+      ) : (
+        <Stack />
+      )}
+
       <TInput
         borderWidth={0}
         borderBottomWidth={"$0.75"}
