@@ -1,15 +1,13 @@
-import { H6, Stack, Text, XStack, YStack } from "tamagui";
-import { UserSquare2 } from "lucide-react-native";
+import { Button, Stack, Text, YStack, ButtonProps, H3, Avatar } from "tamagui";
+import { User2, X } from "lucide-react-native";
+
 export function MemberGroup() {
   return (
-    // color="#F76808"
-    <Stack>
-      <XStack>
-        <UserSquare2 fill="#F76808" />
-      </XStack>
-      <YStack>
-        <Text fontWeight={"bold"}>CarolineSmith</Text>
-      </YStack>
-    </Stack>
+    <YStack>
+      <Button icon={<User2 size={18} color="#F76808" />} circular />
+      <Text fontWeight={"bold"} textAlign="center" fontSize={"$3"}>
+        Erick R.
+      </Text>
+    </YStack>
   );
 }

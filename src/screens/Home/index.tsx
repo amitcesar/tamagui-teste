@@ -1,7 +1,7 @@
 import { Button } from "@components/Button";
 import { GroupCard } from "@components/GroupCard";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { XStack, YStack, ScrollView } from "tamagui";
 import { GreetingsHeader } from "@components/GreetingsHeader";
@@ -9,9 +9,16 @@ import { GreetingsHeader } from "@components/GreetingsHeader";
 import { InfoCard } from "@components/InfoCards";
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
+import { MMKV, useMMKV, useMMKVObject } from "react-native-mmkv";
+
+type User = {
+  email: string;
+  password: string;
+};
 
 export function HomeScreen() {
   const [groups, setGroups] = useState<string[]>(["Grupo 1", "Grupo 2"]);
+  const [user, setUser] = useMMKVObject<User>("user");
   const navitagion = useNavigation<AuthNavigatorRoutesProps>();
 
   function handleUserToCreateNewGroup() {

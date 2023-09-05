@@ -6,6 +6,7 @@ import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
 export function LoginForm() {
   const navitagion = useNavigation<AuthNavigatorRoutesProps>();
+
   function handleUserToLogin() {
     navitagion.navigate("home");
   }

@@ -9,7 +9,6 @@ import { NewGroupScreen } from "@screens/NewGroup";
 import { SignInScreen } from "@screens/SignIn";
 
 type AuthRoutes = {
-  welcome: undefined;
   signIn: undefined;
   signUp: undefined;
   home: undefined;

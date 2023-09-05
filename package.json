@@ -1,13 +1,13 @@
 {
   "name": "tamaguitest",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start-native": "TAMAGUI_TARGET=native expo start -c",
     "start-web": "TAMAGUI_TARGET=web expo start -c",
     "android": "TAMAGUI_TARGET=native yarn expo run:android",
     "ios": "TAMAGUI_TARGET=native yarn expo run:ios",
-    "web": "TAMAGUI_TARGET=web expo start --web"
+    "web": "TAMAGUI_TARGET=web expo start --web",
+    "start": "expo start --dev-client"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.7",

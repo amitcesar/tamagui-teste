@@ -8,7 +8,7 @@ export function Input({ title, ...rest }: Props) {
   return (
     <Stack>
       {title ? (
-        <Text color={"$gray11Light"} pb="$2">
+        <Text color={"$gray11Light"} p="$1.5" pl="$1">
           {title}
         </Text>
       ) : (

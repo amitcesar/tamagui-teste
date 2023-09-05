@@ -1,4 +1,4 @@
-import { Button, XStack } from "tamagui";
+import { Button, H4, XStack } from "tamagui";
 import { ChevronLeft, Coins } from "lucide-react-native";
 import { useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
