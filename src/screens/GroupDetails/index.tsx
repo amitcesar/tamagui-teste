@@ -1,8 +1,26 @@
 import { Header } from "@components/Header";
-import { Stack, XStack, YStack, Text, H2, ScrollView } from "tamagui";
-import { ArrowUpRightFromCircle } from "lucide-react-native";
+import {
+  Stack,
+  XStack,
+  YStack,
+  Text,
+  H2,
+  ScrollView,
+  H6,
+  H5,
+  H4,
+  Avatar,
+} from "tamagui";
+import {
+  ArrowUpRightFromCircle,
+  ArrowDownLeftFromCircle,
+  Search,
+  Bookmark,
+} from "lucide-react-native";
 import { MemberGroup } from "@components/MemberGroup";
 import { AddMember } from "./AddMember";
+import { Button } from "@components/Button";
+import { RecentActivities } from "@components/RecentActivities";
 
 export function GroupDetailsScreen() {
   return (
@@ -40,36 +58,48 @@ export function GroupDetailsScreen() {
             fontSize={"$3"}
             fontWeight="bold"
           >
-            Here are some things you can do
+            Aqui estão algumas coisas que você pode fazer
           </Text>
-          <XStack jc="space-between" ai="center">
+          <XStack jc="space-evenly">
             <YStack
-              backgroundColor={"$blue7"}
+              backgroundColor={"$purple4"}
               borderRadius="$4"
-              h="$10"
               w="$12"
-              p="$3"
+              p="$4"
             >
               <ArrowUpRightFromCircle size={24} color="#000" />
-              <Text color="$gray11" fontSize={"$4"} fontWeight="bold">
-                To wallet, bank or mobile number
+              <Text color="#000" fontSize={"$4"} fontWeight="bold">
+                Pagar alguém
+              </Text>
+              <Text color="$gray11" fontSize={"$3"} fontWeight="bold">
+                Para carteira, banco ou numero de telefone
               </Text>
             </YStack>
             <YStack
-              backgroundColor={"$green5"}
+              backgroundColor={"$gray5"}
               borderRadius="$4"
-              h="$10"
               w="$12"
-              p="$3"
+              jc="space-evenly"
+              p="$4"
             >
-              <ArrowUpRightFromCircle size={32} color="orange" />
-              <Text color="$gray11" fontSize={"$4"} fontWeight="bold">
-                Here are some things you can do
+              <ArrowDownLeftFromCircle size={24} color="#000" />
+
+              <Text color="#000" fontSize={"$4"} fontWeight="bold">
+                Cobrar alguém
+              </Text>
+              <Text color="$gray11" fontSize={"$3"} fontWeight="bold">
+                solicitar dinheiro de qualquer pessoa do grupo
               </Text>
             </YStack>
           </XStack>
         </Stack>
+
+        <Stack mt="$3">
+          <H5>Atividades recentes</H5>
+          <RecentActivities />
+        </Stack>
       </YStack>
+      <Button title="Adicionar Transação" borderRadius={"$2"} m="$4" />
     </Stack>
   );
 }
